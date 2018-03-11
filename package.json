@@ -1,0 +1,38 @@
+{
+  "name": "lucasfloriani.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasfloriani/lucasfloriani.github.io.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "ecms6",
+    "3D",
+    "curriculum"
+  ],
+  "author": "Lucas Floriani <lucas.floriane@gmail.com> (https://github.com/lucasfloriani)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasfloriani/lucasfloriani.github.io/issues"
+  },
+  "homepage": "https://github.com/lucasfloriani/lucasfloriani.github.io#readme",
+  "devDependencies": {
+    "babel-minify-webpack-plugin": "^0.3.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
