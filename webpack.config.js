@@ -1,10 +1,12 @@
-const MinifyPlugin = require("babel-minify-webpack-plugin");
+const path = require('path');
 
-const config = {
-  entry: './js/index.js',
+module.exports = {
+  entry: {
+    index: './js/index.js'
+  },
   output: {
     filename: 'bundle.js',
-    path: './',
+    path: path.join(__dirname)
   },
   module: {
     rules: [
@@ -15,12 +17,11 @@ const config = {
         query: {
             presets: [['es2015']]
         }
-      }
+      },
+      {
+        test: /\.sass$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
     ]
-  },
-  plugins: [
-    new MinifyPlugin(),
-  ]
-};
-
-module.exports = config;
+  }
+}
