@@ -25,9 +25,13 @@
   },
   "homepage": "https://github.com/lucasfloriani/lucasfloriani.github.io#readme",
   "devDependencies": {
+    "autoprefixer": "^8.1.0",
     "babel-minify-webpack-plugin": "^0.3.0",
     "css-loader": "^0.28.10",
+    "mini-css-extract-plugin": "^0.2.0",
     "node-sass": "^4.7.2",
+    "postcss-cli": "^5.0.0",
+    "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
