@@ -3,12 +3,13 @@ const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  mode: 'development',
   entry: {
-    index: './js/index.js'
+    home: './src/js/home.js'
   },
   output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname)
+    filename: '[name].bundle.js',
+    path: path.join(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -17,7 +18,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-            presets: [['es2015']]
+          presets: [['es2015']]
         }
       },
       {
@@ -36,25 +37,21 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               autoprefixer: {
-                browsers: ["last 2 versions"]
+                browsers: ['last 4 versions', '> 1%']
               },
               plugins: () => [
                 autoprefixer
               ]
             },
           },
-          {
-            loader: "sass-loader",
-            options: {}
-          }
+          "sass-loader"
         ]
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css",
-      chunkFilename: "style.css"
+      filename: "style.css"
     })
-  ],
+  ]
 }
