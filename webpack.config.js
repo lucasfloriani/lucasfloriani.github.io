@@ -5,22 +5,25 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    home: './src/js/home.js'
+    home: './src/js/home.js',
+    smoke: './src/js/smoke.js'
   },
   output: {
     filename: '[name].bundle.js',
     path: path.join(__dirname, 'dist')
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    })
+  ],
   module: {
     rules: [
       {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-          // eslint options (if necessary)
-        }
+        loader: 'eslint-loader'
       },
       {
         test: /\.js$/,
@@ -57,10 +60,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'style.css'
-    })
-  ]
+  }
 };

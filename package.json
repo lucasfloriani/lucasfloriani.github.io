@@ -1,11 +1,12 @@
 {
   "name": "lucasfloriani.github.io",
-  "version": "1.0.0",
+  "author": "Lucas Floriani <lucas.floriane@gmail.com> (https://github.com/lucasfloriani)",
+  "homepage": "https://github.com/lucasfloriani/lucasfloriani.github.io#readme",
+  "version": "0.1.0",
+  "license": "MIT",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "./node_modules/.bin/webpack",
-    "start": "webpack-dev-server --entry ./src/js/home.js --output-filename ./dist/[name].bundle.js"
+  "bugs": {
+    "url": "https://github.com/lucasfloriani/lucasfloriani.github.io/issues"
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,12 @@
     "3D",
     "curriculum"
   ],
-  "author": "Lucas Floriani <lucas.floriane@gmail.com> (https://github.com/lucasfloriani)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lucasfloriani/lucasfloriani.github.io/issues"
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "start": "webpack-dev-server --entry ./src/js/home.js --output-filename ./dist/[name].bundle.js",
+    "start:dev": "webpack-dev-server"
   },
-  "homepage": "https://github.com/lucasfloriani/lucasfloriani.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",

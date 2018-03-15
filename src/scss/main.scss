@@ -1,6 +1,2 @@
 @import './base/typography';
-html {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import './pages/home';
