@@ -1,22 +1,40 @@
-.spectre-face-3d {
-  min-height: 100vh;
-  min-width: 100vh;
+@import './../abstracts/variables';
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(to bottom right , $color-9, lighten($color-9, 10%));
 }
+.spectre-3d {
+  display: flex;
+  transform: scale(0.8);
+  transition: 0.2s transform ease-in-out;
+}
+.spectre-face-3d {
+  min-height: 200vh;
+  min-width: 100vw;
+  transition: 0.2s transform ease-in-out;
+}
+
 .intro {
   background-color: red;
+  transform: rotateY(0deg);
 }
 .tecnologies-frontend {
   background-color: blue;
+  transform: rotateY(60deg);
 }
 .tecnologies-backend {
   background-color: yellow;
+  transform: rotateY(120deg);
 }
 .projects {
   background-color: green;
+  transform: rotateY(180deg);
 }
 .bio {
   background-color: purple;
+  transform: rotateY(240deg);
 }
 .contact {
   background-color: orange;
+  transform: rotateY(300deg);
 }
