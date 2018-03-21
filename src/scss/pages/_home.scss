@@ -1,65 +1,23 @@
 @import './../abstracts/variables';
 body {
-  overflow-x: hidden;
-  background-image: linear-gradient(to bottom right , $color-9, lighten($color-9, 10%));
-
-  /* Apagar depois*/
+  background-image: linear-gradient(to bottom right, $color-9, lighten($color-9, 10%));
+}
+.info-section {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Apagar depois*/
-}
-.spectre-3d {
-  display: flex;
-  height: 100vh;
-  transform: scale(0.1) rotateX(114deg) rotateY(0deg);
-  transform-origin: 50% 50%;
-  transform-style: preserve-3d;
-  width: 100vw;
-
-  animation: animation 3s linear infinite;
-}
-.spectre-face-3d {
-  min-height: 200vh;
-  min-width: $widthPseudoPages;
-  transition: 0.2s transform ease-in-out;
-  position: absolute;
-}
-
-.intro {
-  background-color: red;
-  transform: rotateY(0deg) translateZ($widthPseudoPages);
+  width: 100%;
 }
 .tecnologies-frontend {
-  background-color: blue;
-  transform: rotateY(60deg) translateZ($widthPseudoPages);
+  background-image: linear-gradient(to bottom right, $color-1, lighten($color-1, 10%));
 }
 .tecnologies-backend {
-  background-color: yellow;
-  transform: rotateY(120deg) translateZ($widthPseudoPages);
+  background-image: linear-gradient(to bottom right, $color-5, lighten($color-5, 10%));
 }
 .projects {
-  background-color: green;
-  transform: rotateY(180deg) translateZ($widthPseudoPages);
+  background-image: linear-gradient(to bottom right, $color-4, lighten($color-4, 10%));
 }
 .bio {
-  background-color: purple;
-  transform: rotateY(240deg) translateZ($widthPseudoPages);
+  background-image: linear-gradient(to bottom right, $color-2 lighten($color-2, 10%));
 }
 .contact {
-  background-color: orange;
-  transform: rotateY(300deg) translateZ($widthPseudoPages);
-}
-
-@keyframes animation {
-  0% {
-    transform: scale(.1) rotateX(118deg) rotateY(0deg)
-  }
-  50% {
-    transform: scale(.1) rotateX(118deg) rotateY(180deg)
-  }
-  100% {
-    transform: scale(.1) rotateX(118deg) rotateY(360deg)
-  }
+  background-image: linear-gradient(to bottom right, $color-6 lighten($color-6, 10%));
 }
