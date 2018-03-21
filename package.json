@@ -38,17 +38,19 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.9.0",
+    "exports-loader": "^0.7.0",
+    "imports-loader": "^0.8.0",
     "mini-css-extract-plugin": "^0.2.0",
     "node-sass": "^4.7.2",
     "postcss-cli": "^5.0.0",
     "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "three": "^0.91.0",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
-    "three": "^0.91.0"
   }
 }
