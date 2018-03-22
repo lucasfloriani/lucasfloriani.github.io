@@ -6,6 +6,15 @@ body {
   min-height: 100vh;
   width: 100%;
 }
+.intro-smoke {
+  height: inherit;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: inherit;
+}
 .tecnologies-frontend {
   background-image: linear-gradient(to bottom right, $color-1, lighten($color-1, 10%));
 }

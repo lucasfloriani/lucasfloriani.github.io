@@ -24,7 +24,8 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack",
     "start": "webpack-dev-server --entry ./src/js/home.js --output-filename ./dist/[name].bundle.js",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server",
+    "json-to-sass": "json-to-sass ./src/js/animation/variables.json ./src/scss/abstracts/_variables.scss"
   },
   "devDependencies": {
     "autoprefixer": "^8.1.0",
@@ -51,6 +52,5 @@
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

@@ -1,4 +1,4 @@
-import { Clock, CubeGeometry, DirectionalLight, ImageUtils, Mesh, MeshLambertMaterial, PerspectiveCamera, PlaneGeometry, Scene, WebGLRenderer } from 'three';
+import { Clock, Color, CubeGeometry, DirectionalLight, ImageUtils, Mesh, MeshLambertMaterial, PerspectiveCamera, PlaneGeometry, Scene, WebGLRenderer } from 'three';
 
 class Smoke {
   constructor() {
@@ -8,16 +8,17 @@ class Smoke {
 
   init() {
     this.renderer = new WebGLRenderer();
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    // this.renderer.setSize(window.innerWidth, window.innerHeight);
 
     this.scene = new Scene();
+    const smokeColor = new Color('#eb9ffc');
 
     this.camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     this.camera.position.z = 1000;
     this.scene.add(this.camera);
 
     const geometry = new CubeGeometry(200, 200, 200);
-    this.material = new MeshLambertMaterial({ color: 0xaa6666, wireframe: false });
+    this.material = new MeshLambertMaterial({ color: smokeColor, wireframe: false });
     this.mesh = new Mesh(geometry, this.material);
     this.cubeSineDriver = 0;
 
@@ -27,7 +28,7 @@ class Smoke {
 
     const textureUrl = 'src/img/smoke.png';
     const smokeTexture = ImageUtils.loadTexture(textureUrl);
-    const smokeOjb = { color: 0xa28aaa, map: smokeTexture, transparent: true };
+    const smokeOjb = { color: smokeColor, map: smokeTexture, transparent: true };
     const smokeMaterial = new MeshLambertMaterial(smokeOjb);
     const smokeGeo = new PlaneGeometry(300, 300);
     this.smokeParticles = [];
@@ -45,7 +46,9 @@ class Smoke {
       this.smokeParticles.push(particle);
     }
 
-    document.body.appendChild(this.renderer.domElement);
+    this.renderer.domElement.classList.add('intro-smoke');
+    const intro = document.getElementById('js-intro');
+    intro.appendChild(this.renderer.domElement);
 
     this.animate();
   }
