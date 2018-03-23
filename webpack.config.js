@@ -29,7 +29,14 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: [['es2015']]
+          presets: [
+            ['env', {
+              targets: {
+                browsers: ['last 4 versions', 'safari >= 7', 'ie >= 11']
+              }
+            }
+            ]
+          ]
         }
       },
       {
